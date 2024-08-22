@@ -41,6 +41,10 @@ public class UserList {
     //TODO: implements this method to find user in users with valid password
     //TODO: return User object if username and password is correct, otherwise return null
     public User login(String username, String password) {
+        User exist = this.findUserByUsername(username);
+        if(exist.validatePassword(password)){
+            return exist;
+        }
         return null;
     }
 }

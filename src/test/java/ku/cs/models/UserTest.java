@@ -37,4 +37,11 @@ class UserTest {
         User user = new User("user01", "1234");
         assertEquals(true, user.validatePassword("1234"));
     }
+
+    @Test
+    public void testIsUsername(){
+        User user = new User("user01", "1234");
+        boolean actual = user.isUsername("user01");
+        assertTrue(actual);
+    }
 }
